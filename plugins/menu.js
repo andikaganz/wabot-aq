@@ -30,30 +30,25 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ Hai, %name!
-│
-│ Tersisa *%limit Limit*
-│ Role *%role*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+
+🙏🏻 Namaste %name, how can i help you?
+
+🪵 Left: *%limit Limit*
+🎗️ Role: *%role*
+🛕 Level: *%level* 
+☕ Total XP: *%totalexp*
+
+〽️ Prefix: *%p*
+📅 Date: *%week, %date*
+💠 Github: minta ke owner aja om/kak
+
+👇🏻 All usable commands are listed below 
+
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
-  after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+  header: '        *━━❰･%category･❱━━*',
+  body: ' 🌠 %cmd %islimit %isPremium',
+  footer: ' ',
+  after: `🌟 *Hope you're enjoying bot, have a great day* 
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
